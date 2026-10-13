@@ -1,0 +1,35 @@
+BETEL LEITARIA — versão inicial offline
+
+RECURSOS
+- Cadastro do rebanho, raça, nascimento, mãe, pai/touro e observações.
+- Registro de leite por animal, data e ordenha.
+- Histórico de vacinas, medicamentos, cio, cobertura/inseminação, gestação e parto.
+- Registro de receitas e despesas.
+- Painel com produção diária e totais financeiros do mês.
+- Exportação/importação manual de cópia de segurança JSON.
+- Os dados ficam no armazenamento local do aplicativo; não precisa de internet.
+
+LIMITAÇÕES DA VERSÃO 1
+- Não há sincronização automática entre aparelhos.
+- A tela Saúde mostra datas previstas, mas ainda não envia notificações/alarmes Android automáticos.
+- Faça cópias de segurança em Dados para evitar perder registros se desinstalar o aplicativo ou limpar os dados.
+
+COMO GERAR O APK
+1. Instale Android Studio em um computador e instale o Android SDK (API 35) e JDK compatível.
+2. Abra a pasta BetelLeitaria no Android Studio.
+3. Aguarde a sincronização do Gradle e resolva qualquer solicitação de instalação do SDK.
+4. Use Build > Build Bundle(s) / APK(s) > Build APK(s).
+5. O APK de depuração normalmente será criado em app/build/outputs/apk/debug/app-debug.apk.
+6. Transfira esse APK para o celular Android e autorize a instalação de apps dessa origem quando solicitado.
+
+Este pacote contém o projeto-fonte Android e os arquivos locais da aplicação, não um APK já compilado.
+
+
+Atualização: controle reprodutivo integrado ao armazenamento local. Inclui registro de cio, cobertura/inseminação, previsão estimada de parto (283 dias), possível retorno ao cio (21 dias após o cio registrado), estado de prenhez, cadastro de crias com mãe/pai, sexo, peso e brinco. Os dados são incluídos no backup JSON. A previsão é estimativa e não substitui confirmação veterinária.
+
+
+Atualização — lembretes Android implementados no código-fonte:
+- Permissão de notificações Android 13+ e canal “Lembretes da leitaria”.
+- O aplicativo sincroniza datas futuras de cuidados de saúde, retorno estimado ao cio (21 dias após cio observado) e previsão de parto (283 dias após cobertura/inseminação).
+- Os lembretes são programados para as 9h locais e restaurados após reinicialização do aparelho.
+- A versão HTML aberta no navegador não tem acesso a alarmes nativos; notificações dependem de instalar o APK compilado.
